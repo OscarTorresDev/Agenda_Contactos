@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contactos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Agenda de Contactos</h1>
+    
+    <div class="formulario">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="apellido" placeholder="Apellido">
+        <input type="tel" id="telefono" placeholder="Teléfono">
+        <button onclick="añadirContacto()">Añadir Contacto</button>
+    </div>
+
+    <h2>Lista de Contactos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="listaContactos"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

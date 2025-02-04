@@ -23,7 +23,7 @@ public class Main {
                     """);
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -37,7 +37,7 @@ public class Main {
                     String apellido = scanner.nextLine();
                     System.out.print("Teléfono: ");
                     int telefono = scanner.nextInt();
-                    scanner.nextLine(); // Limpiar el buffer
+                    scanner.nextLine();
                     try {
                         Contacto contacto = new Contacto(nombre, apellido, telefono);
                         agenda.añadirContacto(contacto);

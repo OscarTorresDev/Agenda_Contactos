@@ -1,5 +1,4 @@
 package com.agenda.proyecto;
-
 import java.util.ArrayList;
 
 public class Agenda {
@@ -8,7 +7,7 @@ public class Agenda {
 
     public Agenda() {
         this.agenda = new ArrayList<>();
-        this.tamañoMaximo = 10; // Tamaño por defecto es 10
+        this.tamañoMaximo = 10;
     }
 
     public boolean añadirContacto(Contacto contacto) {
@@ -36,14 +35,15 @@ public class Agenda {
         return agenda.contains(contacto);
     }
 
-    public void listarContactos() {
+    public String listarContactos() {
         if (agenda.isEmpty()) {
             System.out.println("La agenda está vacía.");
-            return;
+            return null;
         }
         for (Contacto contacto : agenda) {
             System.out.println(contacto);
         }
+        return null;
     }
 
     public void buscaContacto(String nombre, String apellido) {
@@ -96,5 +96,13 @@ public class Agenda {
 
     public int espacioLibres() {
         return tamañoMaximo - agenda.size();
+    }
+
+    // Nuevo método para obtener la lista de contactos
+    public ArrayList<Contacto> getContactos() {
+        return agenda;
+    }
+
+    public void agregarContacto(Contacto contacto) {
     }
 }
