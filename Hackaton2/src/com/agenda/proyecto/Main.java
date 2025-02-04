@@ -1,5 +1,8 @@
 package com.agenda.proyecto;
 
+import com.agenda.clases.Agenda;
+import com.agenda.clases.Contacto;
+
 import java.util.Scanner;
 
 public class Main
@@ -10,7 +13,9 @@ public class Main
         Scanner sc = new Scanner(System.in);
 
         // Usamos siempre la cantidad fija de 10
-
+        String nombre;
+        String apellido;
+        String telefono;
         int opcion = 0;
 
         System.out.println("\n===== BIENVENIDO A NUESTRA AGENDA TELEFÓNICA =====");
@@ -45,21 +50,24 @@ public class Main
             switch (opcion)
             {
                 case 1:
-                    System.out.println("=== Añadir Contacto ===");
-                    System.out.print("Nombre: ");
-                    String nombre = sc.nextLine();
-                    System.out.print("Apellido: ");
-                    String apellido = sc.nextLine();
-                    System.out.print("Teléfono: ");
-                    String telefono = sc.nextLine();
-                    try {
-                        Contacto nuevoContacto = new Contacto(nombre, apellido, telefono);
-                        agenda.anadirContacto(nuevoContacto);
-                    } catch (Exception e)
-                    {
-                        System.out.println(e.getMessage());
+                    if (!agenda.agendaLlena()) {
+                        System.out.println("=== Añadir Contacto ===");
+                        System.out.print("Nombre: ");
+                        nombre = sc.nextLine();
+                        System.out.print("Apellido: ");
+                        apellido = sc.nextLine();
+                        System.out.print("Teléfono: ");
+                        telefono = sc.nextLine();
+                        try {
+                            Contacto nuevoContacto = new Contacto(nombre, apellido, telefono);
+                            agenda.anadirContacto(nuevoContacto);
+                        } catch (Exception e) {
+                            System.out.println(e.getMessage());
+                        }
                     }
-
+                    else{
+                        System.out.println("\n ¡ Agenda llena !\n");
+                    }
                     break;
 
                 case 2:

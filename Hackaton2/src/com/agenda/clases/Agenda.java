@@ -1,4 +1,4 @@
-package com.agenda.proyecto;
+package com.agenda.clases;
 
 import java.util.ArrayList;
 
