@@ -1,9 +1,9 @@
 package com.agenda.proyecto;
 
 public  class Contacto {
-    String nombre;
-    String apellido;
-    int numeroContacto;
+    private String nombre;
+    private String apellido;
+    private int numeroContacto;
 
     public Contacto() {
     }
@@ -19,9 +19,6 @@ public  class Contacto {
         }
     }
     ///metodos
-     public void anadirContacto (Contacto c){
-     }
-
 
     ///metodos
     public String getApellido() {
