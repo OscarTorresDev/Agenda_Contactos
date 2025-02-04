@@ -18,8 +18,9 @@ public class Main {
                       \n
                                 Menu
                        1) Añadir contacto.
-                       2) Mostrar Agenda
-                       3) Salir.     
+                       2) Mostrar Agenda.
+                       3) Listar contactos.
+                       4) Salir.     
                     """);
             opcion = scanner.nextInt();
 
@@ -44,13 +45,16 @@ public class Main {
                          agenda.mostrarDatos();
                         break;
                     case 3 :
-                        System.out.println("Hasta pronto");;
+                        agenda.listarContactos();
+                        break;
+                    case 4 :
+                        System.out.println("Hasta pronto");
                         break;
                     default:
                         System.out.println("Digite una opcion valida");
                 }
 
-        }while (opcion != 3);
+        }while (opcion != 4);
         System.out.println("Fin del programa");
 
     }
