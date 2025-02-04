@@ -14,6 +14,11 @@ public class Agenda
         this.tamañoMaximo = tamañoAgenda;
     }
 
+    public ArrayList<Contacto> getListaContactos()
+    {
+        return this.listaContactos;
+    }
+
     public void anadirContacto(Contacto c)
     {
         if (this.agendaLlena())
