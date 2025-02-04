@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        //Agenda agenda = new Agenda();
+        Agenda agenda = new Agenda();
         int opcion = 0;
         do {
             System.out.println("""
-                            Menu
+                            \nMenu
                        1) Añadir contacto.
                        2) Mostrar Agenda
                        3) Salir.     
@@ -25,18 +25,18 @@ public class Main {
                         String apellido = scanner.next();
                         System.out.println("Digite el telefono : ");
                         int telefono = scanner.nextInt();
-                        Agenda agenda = new Agenda(nombre,apellido,telefono);
+                        Contacto contacto= new Contacto(apellido,telefono,nombre);
+                        agenda.anadirContacto(contacto);
                         break;
                     case 2 :
-                         agenda.mostrarDatos();
+                        agenda.mostrarDatos();
                         break;
                     default:
                         System.out.println("Digite una opcion valida");
                 }
 
         }while (opcion != 3);
-        System.out.println("Dig");
-
+        System.out.println("Fin del programa");
 
     }
 }

@@ -20,8 +20,6 @@ public  class Contacto {
     }
     ///metodos
      public void anadirContacto (Contacto c){
-
-
      }
 
 

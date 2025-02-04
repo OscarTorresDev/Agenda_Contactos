@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 public class Agenda extends Contacto{
 
-  private ArrayList<Contacto> agenda = new ArrayList<>();
+    ArrayList<Contacto> agenda = new ArrayList<>();
+
+    public Agenda() {
+    }
 
     public Agenda(String apellido, int numeroContacto, String nombre) {
         super(apellido, numeroContacto, nombre);
-       // this.agenda = agenda;
     }
 
     public void anadirContacto (Contacto contactoNuevo) {
@@ -28,7 +30,7 @@ public class Agenda extends Contacto{
     }
         public void mostrarDatos(){
             for (Contacto contacto : agenda){
-                System.out.println("Nombre :" + contacto.getNombre());
+                System.out.println("\nombre :" + contacto.getNombre());
                 System.out.println("Apellido :" + contacto.getApellido());
                 System.out.println("Apellido :" + contacto.getNumeroContacto());
             }
@@ -43,4 +45,4 @@ public class Agenda extends Contacto{
         }
 
     }
-}
+
